@@ -1,0 +1,50 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2009.vpi";
+S_0000020c0b3925a0 .scope package, "$unit" "$unit" 2 1;
+ .timescale 0 0;
+S_0000020c0b392730 .scope module, "arr" "arr" 3 1;
+ .timescale 0 0;
+v0000020c0b4f9ef0_0 .var/darray "dyna", 1;
+    .scope S_0000020c0b392730;
+T_0 ;
+    %ix/load 4, 4, 0;
+    %flag_set/imm 4, 0;
+    %new/darray 4, "b1";
+    %store/obj v0000020c0b4f9ef0_0; Arrays\Dynamic.sv:4: dyna = new ...
+    %vpi_func 3 5 "$size" 32, v0000020c0b4f9ef0_0 {0 0 0};
+    %vpi_call/w 3 5 "$display", S<0,vec4,s32> {1 0 0};
+    %pushi/vec4 1, 0, 1;
+    %ix/load 3, 1, 0;
+    %flag_set/imm 4, 0;
+    %store/dar/vec4 v0000020c0b4f9ef0_0;
+    %pushi/vec4 0, 0, 1;
+    %ix/load 3, 3, 0;
+    %flag_set/imm 4, 0;
+    %store/dar/vec4 v0000020c0b4f9ef0_0;
+    %ix/load 4, 8, 0;
+    %flag_set/imm 4, 0;
+    %new/darray 4, "b1";
+    %load/obj v0000020c0b4f9ef0_0;
+    %scopy;
+    %store/obj v0000020c0b4f9ef0_0; Arrays\Dynamic.sv:8: dyna = new ...
+    %vpi_func 3 9 "$size" 32, v0000020c0b4f9ef0_0 {0 0 0};
+    %vpi_call/w 3 9 "$display", S<0,vec4,s32> {1 0 0};
+    %delete/obj v0000020c0b4f9ef0_0;
+    %vpi_func 3 11 "$size" 32, v0000020c0b4f9ef0_0 {0 0 0};
+    %vpi_call/w 3 11 "$display", S<0,vec4,s32> {1 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "-";
+    "Arrays\Dynamic.sv";
