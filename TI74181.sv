@@ -36,13 +36,7 @@ module TI74181(
     // Carry propagate and generate output
     assign P = p[0] & p[1] & p[2] & p[3];
     assign G = (g[3] | (p[3] & g[2])) | (p[3] & p[2] & g[1]) | (p[3] & p[2] & p[1] & g[0]);
-    
-    // Carry lookahead logic
-    assign C[1] = g[0] | (p[0] & C[0]);
-    assign C[2] = g[1] | (p[1] & g[0]) | (p[1] & p[0] & C[0]);
-    assign C[3] = g[2] | (p[2] & g[1]) | (p[2] & p[1] & g[0]) | (p[2] & p[1] & p[0] & C[0]);
-    assign C[4] = g[3] | (p[3] & g[2]) | (p[3] & p[2] & g[1]) | (p[3] & p[2] & p[1] & g[0]) | (p[3] & p[2] & p[1] & p[0] & C[0]);
-    
+      
     assign Cn1 = C[4];
     
     // Logic operations (when M=1)
