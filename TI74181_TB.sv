@@ -21,7 +21,7 @@ module TI74181_TB;
         .Cn1(Cn1_tb),
         .F(F_tb)
     );
-
+    
     // Test counter
     integer test_num = 0;
     integer pass_count = 0;
@@ -34,7 +34,7 @@ module TI74181_TB;
                  test_num, A_tb, B_tb, S_tb, M_tb, Cn_tb, F_tb, P_tb, G_tb, Cn1_tb, operation_name);
     endtask
     
-
+    // Task for assertion checks
     task check_result(logic [3:0] expected_F, string test_case);
         if(F_tb == expected_F) begin
             pass_count++;
